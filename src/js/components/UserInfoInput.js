@@ -29,6 +29,14 @@ export default class UserInfoInput extends React.Component {
     })
   }
 
+  // When "Enter" is pressed on the input, prevent form from being submitted and instead fire the event to lookup a user.
+  handleKeyPress(evt)  {
+    if(evt.charCode==13) {
+      this.props.onGetUserInfo(this.state.username) // or just call handleUserInfo?
+      evt.preventDefault()
+    }
+  }
+
   handleGetUserInfo() {
     this.props.onGetUserInfo(this.state.username)
   }
@@ -52,6 +60,7 @@ export default class UserInfoInput extends React.Component {
                     value={ this.state.username }
                     placeholder=""
                     onChange={ (evt) => this.handleUsernameInputChange(evt) }
+                    onKeyPress={ (evt) => this.handleKeyPress(evt) }
                   />
                   <FormControl.Feedback />
                 </Col>

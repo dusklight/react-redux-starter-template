@@ -12,10 +12,12 @@ import store from "./store";
 
 import UserInfoApp from "./components/UserInfoApp";
 
+// TODO: There are two routes, the second one for getting it to work with Github publishing.  Look into using git subtree (contrib).
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path='/' component={UserInfoApp} />
+      <Route path="/react-redux-starter-template/src/" component={UserInfoApp} />
     </Router>
   </Provider>,
   document.getElementById('app')

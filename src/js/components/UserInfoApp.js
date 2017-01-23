@@ -46,6 +46,7 @@ export class UserInfoContainer extends React.Component {
         <Jumbotron>
           <h1>React Starter Template</h1>
           <p>With redux and fetch, and a working example that retrieves Github user information.</p>
+          <p><a href="https://github.com/dusklight/react-redux-starter-template">https://github.com/dusklight/react-redux-starter-template</a></p>
         </Jumbotron>
         <UserInfoInput username={this.props.username} onGetUserInfo={this.getUserInfo} />
         <UserInfoDisplayPanel username={this.props.username} userInfo={this.props.userInfo} />

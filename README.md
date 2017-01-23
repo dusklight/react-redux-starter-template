@@ -7,6 +7,8 @@ A react starter template that includes/uses:
 - babel
 - webpack
 
+Demo: https://dusklight.github.io/react-redux-starter-template/src/
+
 It includes a rudimentary but functional app that retrieves Github user information.
 
 This is meant to be used as a learning tool for now, definitely not production ready.
